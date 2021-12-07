@@ -14,6 +14,11 @@ public class RubyController : MonoBehaviour
     public int maxHealth;
 
     private int _currentHealth;
+    
+    public int Health
+    {
+        get { return _currentHealth; }
+    }
     // Start is called before the first frame update
     void Start()
     {
