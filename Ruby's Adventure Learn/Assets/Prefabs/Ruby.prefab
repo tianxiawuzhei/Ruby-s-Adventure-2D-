@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7412041869563384967}
   - component: {fileID: 2928337031811749541}
   - component: {fileID: 15301858335499496}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ruby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,8 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1c6ddf41ef34e28bf6a2b0db5763a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 5
   timeInvincible: 2
+  projectilePrefab: {fileID: 8034978927713804458, guid: 2b172603576424239a2561ec6c9ee806,
+    type: 3}
 --- !u!50 &7412041869563384967
 Rigidbody2D:
   serializedVersion: 4
@@ -117,7 +119,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &2928337031811749541

@@ -7028,11 +7028,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ruby
       objectReference: {fileID: 0}
-    - target: {fileID: 7138265560601681926, guid: 3ef5ae413a6c741249251275a9822919,
-        type: 3}
-      propertyPath: maxHealth
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7138265560601681927, guid: 3ef5ae413a6c741249251275a9822919,
         type: 3}
       propertyPath: m_RootOrder
@@ -7041,12 +7036,12 @@ PrefabInstance:
     - target: {fileID: 7138265560601681927, guid: 3ef5ae413a6c741249251275a9822919,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.66
+      value: -4.119
       objectReference: {fileID: 0}
     - target: {fileID: 7138265560601681927, guid: 3ef5ae413a6c741249251275a9822919,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.77
+      value: 0.336
       objectReference: {fileID: 0}
     - target: {fileID: 7138265560601681927, guid: 3ef5ae413a6c741249251275a9822919,
         type: 3}
@@ -7086,11 +7081,6 @@ PrefabInstance:
     - target: {fileID: 7138265560601681927, guid: 3ef5ae413a6c741249251275a9822919,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7412041869563384967, guid: 3ef5ae413a6c741249251275a9822919,
-        type: 3}
-      propertyPath: m_SleepingMode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -13,6 +13,8 @@ public class EnemyController : MonoBehaviour
     private Animator _animator;
     float timer;
     int direction = 1;
+
+    private bool broken = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,10 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!broken)
+        {
+            return;
+        }
         timer -= Time.deltaTime;
 
         if (timer < 0)
@@ -35,6 +41,10 @@ public class EnemyController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(!broken)
+        {
+            return;
+        }
         Vector2 position = enemyRb.position;
         if (vertical)
         {
@@ -62,5 +72,12 @@ public class EnemyController : MonoBehaviour
         {
             player.ChangeHealth(-1);
         }
+    }
+    
+    //使用 public 的原因是我们希望像飞弹脚本一样在其他地方调用这个函数
+    public void Fix()
+    {
+        broken = false;
+        enemyRb.simulated = false;
     }
 }

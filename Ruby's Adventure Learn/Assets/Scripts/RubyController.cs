@@ -7,6 +7,7 @@ public class RubyController : MonoBehaviour
 {
     public int maxHealth;
     public float timeInvincible = 2.0f;
+    public GameObject projectilePrefab;
     
     private Rigidbody2D _rubyRb;
     private Animator _animator;
@@ -41,6 +42,11 @@ public class RubyController : MonoBehaviour
     {
         _horizontal = Input.GetAxis("Horizontal");
         _vertical = Input.GetAxis("Vertical");
+        
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            Launch();
+        }
         
         Vector2 move = new Vector2(_horizontal, _vertical);
         
@@ -88,5 +94,15 @@ public class RubyController : MonoBehaviour
         
         _currentHealth = Mathf.Clamp(_currentHealth + amount, 0, maxHealth);
         Debug.Log(_currentHealth + "/" + maxHealth);
+    }
+    
+    void Launch()
+    {
+        GameObject projectileObject = Instantiate(projectilePrefab, _rubyRb.position + Vector2.up * 0.5f, Quaternion.identity);
+
+        Projectile projectile = projectileObject.GetComponent<Projectile>();
+        projectile.Launch(lookDirection, 300);
+
+        _animator.SetTrigger("Launch");
     }
 }
