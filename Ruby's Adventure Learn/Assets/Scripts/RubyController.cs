@@ -11,6 +11,7 @@ public class RubyController : MonoBehaviour
     
     private Rigidbody2D _rubyRb;
     private Animator _animator;
+    private AudioSource _audioSource;
     
     private Vector2 lookDirection = new Vector2(1,0);
 
@@ -34,6 +35,7 @@ public class RubyController : MonoBehaviour
         //Application.targetFrameRate = 10;
         _rubyRb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
         _currentHealth = maxHealth;
     }
 
@@ -118,5 +120,10 @@ public class RubyController : MonoBehaviour
         projectile.Launch(lookDirection, 300);
 
         _animator.SetTrigger("Launch");
+    }
+    
+    public void PlaySound(AudioClip clip)
+    {
+        _audioSource.PlayOneShot(clip);
     }
 }
